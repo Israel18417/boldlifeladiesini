@@ -133,49 +133,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const donationImpactTitle = document.getElementById('donation-impact-title');
   const donationImpactDesc = document.getElementById('donation-impact-desc');
   const donateSubmitBtn = document.getElementById('donate-submit-btn');
-
   const impacts = {
-    under25: {
+    under5000: {
       icon: '❤️',
       title: 'Community Support Circle',
-      desc: 'Your donation of $[value] funds printing of mental health safety brochures and support materials for local girls.'
+      desc: 'Your donation of ₦[value] funds printing of mental health safety brochures and support materials for local girls.'
     },
-    tier25: {
+    tier5000: {
       icon: '🎒',
       title: 'Educational Starter Kit',
-      desc: 'Your $25 donation supplies books, writing pads, mathematical sets, and a durable schoolbag for an entire school term.'
+      desc: 'Your ₦5,000 donation supplies books, writing pads, mathematical sets, and a durable schoolbag for an entire school term.'
     },
-    tier50: {
+    tier15000: {
       icon: '💻',
       title: 'Digital Skills Training',
-      desc: 'Your $50 donation covers 1 month of high-speed internet subscription and learning-portal credits for our coding bootcamp.'
+      desc: 'Your ₦15,000 donation covers 1 month of high-speed internet subscription and learning-portal credits for our coding bootcamp.'
     },
-    tier100: {
+    tier50000: {
       icon: '🎓',
       title: 'Tertiary Registration Fund',
-      desc: 'Your $100 donation covers first-year admission processing costs and syllabus books for a high-achieving high school graduate.'
+      desc: 'Your ₦50,000 donation covers first-year admission processing costs and syllabus books for a high-achieving high school graduate.'
     },
-    tier250: {
+    tier100000: {
       icon: '🧵',
       title: 'Sovereign Business Startup Kit',
-      desc: 'Your $250 donation directly buys a vocational graduate her toolkits (such as an industrial sewing machine or bakery equipment).'
+      desc: 'Your ₦100,000 donation directly buys a vocational graduate her toolkits (such as an industrial sewing machine or bakery equipment).'
     }
   };
 
   const updateDonationImpact = (amount) => {
     let selectedImpact;
     
-    if (amount < 25) {
-      selectedImpact = { ...impacts.under25 };
-      selectedImpact.desc = selectedImpact.desc.replace('[value]', amount);
-    } else if (amount >= 25 && amount < 50) {
-      selectedImpact = impacts.tier25;
-    } else if (amount >= 50 && amount < 100) {
-      selectedImpact = impacts.tier50;
-    } else if (amount >= 100 && amount < 250) {
-      selectedImpact = impacts.tier100;
+    if (amount < 5000) {
+      selectedImpact = { ...impacts.under5000 };
+      selectedImpact.desc = selectedImpact.desc.replace('[value]', amount.toLocaleString());
+    } else if (amount >= 5000 && amount < 15000) {
+      selectedImpact = impacts.tier5000;
+    } else if (amount >= 15000 && amount < 50000) {
+      selectedImpact = impacts.tier15000;
+    } else if (amount >= 50000 && amount < 100000) {
+      selectedImpact = impacts.tier50000;
     } else {
-      selectedImpact = impacts.tier250;
+      selectedImpact = impacts.tier100000;
     }
 
     donationImpactIcon.textContent = selectedImpact.icon;
@@ -219,10 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Please enter a valid donation amount greater than 0.');
         return;
       }
-      alert(`Thank you for simulating a donation of $${donationVal}! In a real application, this would securely redirect to your payment gateway (e.g. Paystack or Stripe).`);
+      alert(`Thank you for simulating a donation of ₦${donationVal.toLocaleString()}! In a real application, this would securely redirect to your payment gateway (e.g. Paystack or Flutterwave).`);
     });
   }
-
 
   // ==========================================
   // 5. VOLUNTEER & CONTACT FORM VALIDATIONS

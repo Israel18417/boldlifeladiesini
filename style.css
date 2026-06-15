@@ -1454,7 +1454,13 @@ footer {
   }
   
   .nav-cta {
-    display: none; /* Hide on mobile navbar directly */
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  
+  .nav-cta .btn {
+    display: none; /* Hide the Donate Now button on mobile navbar */
   }
   
   .menu-toggle {
