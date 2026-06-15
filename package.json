@@ -1,0 +1,22 @@
+{
+  "name": "bold-life-ladies-initiative",
+  "version": "1.0.0",
+  "description": "Website for Bold Life Ladies Initiative - NGO empowering women and girls.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "ngo",
+    "women-empowerment",
+    "frontend",
+    "vanilla"
+  ],
+  "author": "Antigravity AI",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
