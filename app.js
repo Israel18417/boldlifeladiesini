@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Please enter a valid donation amount greater than 0.');
         return;
       }
-      alert(`Israel! I have to work on redirecting to payment gateway here (e.g. Paystack or Flutterwave) for ₦${donationVal.toLocaleString()}.`);
+      alert(`Note to self: Israel, you need to connect Paystack/Flutterwave API here to collect this ₦${donationVal.toLocaleString()} donation.`);
     });
   }
 
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const input = newsletterForm.querySelector('.newsletter-input');
       if (input && input.checkValidity()) {
-        alert(`Israel! I have to connect this newsletter input (${input.value}) to a marketing service (e.g. Mailchimp, Sender, or a custom database).`);
+        alert(`TODO (Israel): Connect newsletter subscription for ${input.value} to Mailchimp or a database.`);
         input.value = '';
       }
     });
