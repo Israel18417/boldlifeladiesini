@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Please enter a valid donation amount greater than 0.');
         return;
       }
-      alert(`Thank you for simulating a donation of ₦${donationVal.toLocaleString()}! In a real application, this would securely redirect to your payment gateway (e.g. Paystack or Flutterwave).`);
+      alert(`Israel! I have to work on redirecting to payment gateway here (e.g. Paystack or Flutterwave) for ₦${donationVal.toLocaleString()}.`);
     });
   }
 
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const input = newsletterForm.querySelector('.newsletter-input');
       if (input && input.checkValidity()) {
-        alert(`Thank you! The email address ${input.value} has been subscribed to the Bold Life Ladies Initiative newsletter.`);
+        alert(`Israel! I have to connect this newsletter input (${input.value}) to a marketing service (e.g. Mailchimp, Sender, or a custom database).`);
         input.value = '';
       }
     });
